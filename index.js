@@ -1,9 +1,17 @@
 // settings up library for discord bot
-const commando = require('discord.js-commando');
 const mongodb = require('mongodb');
+const commando = require('discord.js-commando');
 const token = 'NDIwNjUxODE1MjgyMDE2MjU2.DYHaIQ.s4poWTyrhxMtc0QB0R7cU-yBqsg';
 const bot = new commando.Client();
 
+/* THINGS TO-DO
+    1. implement warnings befor kick -> ban
+    2. handle privilege level too low
+    3. look for better word blacklist system
+    4. implement champion roll -> !roll adc output:Caitlyn || !roll output:ziggs (random champion)
+    5. get op.gg api to output summoner info -> !opgg sslmummy output: (prints top 5 champions in format) zed 21W 15L 58% winrate
+*/
+// collection: champions, {name: 'Brand'}, {role: 'Mid'}, {role2: 'Support'}, {type: 'AP'}
 
 
 // commands are split into groups
@@ -47,5 +55,4 @@ bot.on('message', message => {
         coll.updateOne({'id':user_id}, {$set: {id:user_id}, $inc:{post_count:1}}, {upsert: true});
         database.close();
     });
-
 });
