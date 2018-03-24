@@ -33,11 +33,7 @@ bot.on('message', message => {
         return;
     }
     // words that will get you banned from the server. NEED BETTER SYSTEM!
-    var words = ['nigger', 'n!gger', 'n!gg3r', 'nigg3r', 'nigga', 'n!gga', 'n!gg@',
-    'nigg@', 'n@gg@', 'niger','n!ger','n!g3r','nig3r','niga','n!ga','nig@','n!g@',
-        'nagga','n@gg@','n@gga','nagg@','nig','negger','n3gger','negg3r','n3gg3r',
-    'n3gga','negg@','megger','m3gger','m3gg3r','m!gger','m!gg3r','migger','migg3r',
-        'miger','m!ger','mig3r','m!g3r','migga','m!gga','migg@','m!gg@','miga','m!ga','m!g@','mig@'];
+    var words = ['hate'];
 
     for(var word of words){
         if(msg.includes(word)){
