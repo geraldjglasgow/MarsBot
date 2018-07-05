@@ -5,7 +5,7 @@ class PostCounter extends commando.Command {
     constructor(client) {
         super(client, {
             name: 'post',
-            group: 'post-counter',
+            group: 'general',
             memberName: 'post',
             description: 'number of posts',
             examples: ['post']

@@ -37,7 +37,7 @@ bot.on('message', message => {
     var MongoClient = mongodb.MongoClient;
     MongoClient.connect(url,(err,database) =>{
         const db = database.db('discord');
-        var coll = db.collection('user_info');
+        var coll = db.collection('userInfo');
         coll.updateOne({'id':user_id}, {$set: {id:user_id}, $inc:{post_count:1}}, {upsert: true});
         database.close();
     });

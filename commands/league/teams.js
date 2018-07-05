@@ -1,6 +1,6 @@
 const commando = require('discord.js-commando');
 const mongodb = require('mongodb');
-const assert = reuire('assert');
+const assert = require('assert');
 
 
 class Team extends commando.Command {
