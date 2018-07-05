@@ -4,6 +4,7 @@
   "description": "discord bot",
   "dependencies": {
     "assert": "^1.4.1",
+    "discord.js": "^11.3.2",
     "discord.js-commando": "^0.9.0",
     "fs": "0.0.1-security",
     "mongodb": "^3.0.4",
