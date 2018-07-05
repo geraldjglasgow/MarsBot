@@ -8,15 +8,12 @@ const bot = new commando.Client();
 
 
 // commands are split into groups
-bot.registry.registerGroup('random', 'Random');
 bot.registry.registerGroup('league', 'League');
-bot.registry.registerGroup('post-counter', 'Post-counter');
+bot.registry.registerGroup('general', 'General');
 //bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands")
 bot.login(token);
 
-// every message sent will increment total messages sent for user
-// every message will be checked for racist words
 bot.on('message', message => {
     var user = message.author;
     var user_id = message.author.id;

@@ -14,22 +14,12 @@ class Team extends commando.Command {
         });
     }
 
-    // code run when command is called
     async run(message, args) {
-        // accessing mongodb to update post count
-
         var mems = message.member.voiceChannel.members;
-        //console.log(mems);
-        //console.log(mems.guild);
         let names = [];
         for (let [username, User] of mems) {
-            //console.log(snowflake);
-            //console.log(username);
             names.push(User.displayName);
-            //console.log(guildMember);
-            //console.log(guildMember + "\n");
         }
-        //console.log(names);
         let team1 = parseInt(names.length / 2);
         let team2 = names.length - team1;
 
@@ -51,11 +41,7 @@ class Team extends commando.Command {
                 for (i = names.length; i > team2; i--) {
                     var index = Math.floor(Math.random() * (result.length + 1));
                     message.channel.send(names[i-1] + ": " + result[index].name);
-                }
-                /*names.forEach(function(item, index, array) {
-                    var index = Math.floor(Math.random() * (result.length + 1));
-                    message.channel.send(item + ": " + result[index].name);
-                })*/
+                }             
             })
             database.close();
         });
