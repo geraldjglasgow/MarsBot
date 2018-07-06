@@ -1,16 +1,10 @@
 // settings up library for discord bot
 const sqlite3 = require('sqlite3').verbose();
 const commando = require('discord.js-commando');
-<<<<<<< HEAD
 const assert = require('assert');
 const bot = new commando.Client({
 	unknownCommandResponse: false
 });
-=======
-const token = // DO NOT POST TOKEN LIKE I DID!
-const bot = new commando.Client();
->>>>>>> 7974510aafcca379a4fc99f45f7b09206503f928
-
 
 
 // collection: champions, {name: 'Brand'}, {role: 'Mid'}, {role2: 'Support'}, {type: 'AP'}
