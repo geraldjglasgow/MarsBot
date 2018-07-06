@@ -3,6 +3,8 @@ package*
 token*
 .*
 !/.gitignore
-.gitattributes
-.token.js.swap
-.idea
+.gitattributes*
+.token.js.swap*
+.idea*
+.idea/
+.token.js.swap/
