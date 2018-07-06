@@ -1,11 +1,11 @@
 // settings up library for discord bot
 const sqlite3 = require('sqlite3').verbose();
+const file = require("./token");
 const commando = require('discord.js-commando');
 const assert = require('assert');
 const bot = new commando.Client({
 	unknownCommandResponse: false
 });
-
 
 // collection: champions, {name: 'Brand'}, {role: 'Mid'}, {role2: 'Support'}, {type: 'AP'}
 
@@ -14,7 +14,7 @@ const bot = new commando.Client({
 //bot.registry.registerGroup('general', 'General');
 //bot.registry.registerDefaults();
 //bot.registry.registerCommandsIn(__dirname + "/commands")
-bot.login(token);
+bot.login(file.token());
 
 bot.on('message', message => {
     var user = message.author;
