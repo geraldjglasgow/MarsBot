@@ -1,7 +1,7 @@
 // settings up library for discord bot
 const mongodb = require('mongodb');
 const commando = require('discord.js-commando');
-const token = 'NDIwNjUxODE1MjgyMDE2MjU2.DYHaIQ.s4poWTyrhxMtc0QB0R7cU-yBqsg';
+const token = // DO NOT POST TOKEN LIKE I DID!
 const bot = new commando.Client();
 
 // collection: champions, {name: 'Brand'}, {role: 'Mid'}, {role2: 'Support'}, {type: 'AP'}
