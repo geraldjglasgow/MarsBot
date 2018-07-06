@@ -1,16 +1,31 @@
 {
   "name": "MarsBot",
-  "version": "0.0.1",
-  "description": "discord bot",
-  "dependencies": {
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geraldjglasgow/MarsBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geraldjglasgow/MarsBot/issues"
+  },
+  "homepage": "https://github.com/geraldjglasgow/MarsBot#readme",
+  "devDependencies": {
     "assert": "^1.4.1",
     "discord.js": "^11.3.2",
-    "discord.js-commando": "^0.9.0",
+    "discord.js-commando": "^0.10.0",
     "fs": "0.0.1-security",
-    "mongodb": "^3.0.4",
-    "promise": "^8.0.1",
-    "request": "^2.83.0"
+    "request": "^2.87.0"
   },
-  "author": "SSLGhost",
-  "license": "MIT"
+  "dependencies": {
+    "mongodb": "^3.1.0",
+    "sqlite3": "^4.0.1"
+  }
 }
