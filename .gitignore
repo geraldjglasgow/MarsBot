@@ -1,0 +1,11 @@
+node_modules/
+package*
+token*
+.*
+!/.gitignore
+.gitattributes*
+.token.js.swap*
+.idea*
+.idea/
+.token.js.swap/
+config.json
