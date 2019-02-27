@@ -10,10 +10,16 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.member.user.id === BOT_ID) {
-        return;
+    if(message.member !== null) {
+        if (message.member.user.id === BOT_ID) {
+            return;
+        }
+        MessageCommands.tryCommand(message);
     }
-    MessageCommands.tryCommand(message);
 });
+
+function verifyMessage(message) {
+
+}
 
 client.login(token);
