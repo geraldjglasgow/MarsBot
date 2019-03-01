@@ -1,21 +1,27 @@
 const Discord = require('discord.js');
 const MessageCommands = require('./MessageCommands.js');
-const {prefix, token} = require('./config.json');
+const {prefix, token, me, bot} = require('./config.json');
 const client = new Discord.Client();
-
-const BOT_ID = '464615692646350848';
 
 client.once('ready', () => {
     console.log("MarsBot started");
 });
 
 client.on('message', message => {
-    if(message.member !== null) {
-        if (message.member.user.id === BOT_ID) {
-            return;
+    try {
+        if (message.member !== null) {
+            if (message.member.user.id === bot) {
+                return;
+            }
+            MessageCommands.tryCommand(message);
         }
-        MessageCommands.tryCommand(message);
+    } catch(error){
+        console.error(error);
+        message.channel.send("something went wrong");
+    } finally {
+
     }
+
 });
 
 function verifyMessage(message) {
